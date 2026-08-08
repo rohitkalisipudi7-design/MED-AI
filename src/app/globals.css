@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Stitch Premium Dark Palette Case */
+    --background: 0.15 0.01 260;
+    --foreground: 0.89 0.01 270;
+
+    --card: 0.18 0.02 260;
+    --card-foreground: 0.89 0.01 270;
+
+    --popover: 0.18 0.02 260;
+    --popover-foreground: 0.89 0.01 270;
+
+    --primary: 0.78 0.12 270;
+    --primary-foreground: 0.1 0.05 270;
+
+    --secondary: 0.25 0.05 270;
+    --secondary-foreground: 0.89 0.01 270;
+
+    --muted: 0.22 0.02 260;
+    --muted-foreground: 0.65 0.02 270;
+
+    --accent: 0.25 0.1 270;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.6 0.18 25;
+    --destructive-foreground: 0.98 0.01 25;
+
+    --border: 0.25 0.02 260;
+    --input: 0.25 0.02 260;
+    --ring: 0.78 0.12 270;
+    --radius: 1rem;
+
+    /* Sidebar Variables */
+    --sidebar-background: 0.15 0.01 260;
+    --sidebar-foreground: 0.89 0.01 270;
+    --sidebar-primary: 0.78 0.12 270;
+    --sidebar-primary-foreground: 0.1 0.05 270;
+    --sidebar-accent: 0.25 0.05 270;
+    --sidebar-accent-foreground: 0.89 0.01 270;
+    --sidebar-border: 0.25 0.02 260;
+    --sidebar-ring: 0.78 0.12 270;
+
+    /* Medical Status */
+    --warning: 0.75 0.15 80;
+    --abnormal-high: 0.6 0.18 25;
+    --abnormal-low: 0.5 0.15 250;
+    --normal: 0.7 0.15 150;
+    --critical: 0.4 0.2 25;
+
+    /* Glassmorphism Variables */
+    --glass-background: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Dark mode is default for this premium theme */
+  .dark {
+    --background: 0.15 0.01 260;
+    --foreground: 0.89 0.01 270;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground bg-mesh min-h-screen selection:bg-primary/30;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply backdrop-blur-xl border border-white/5;
+    background: var(--glass-background);
+  }
+
+  .bg-mesh {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.3) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(253,16%,7%,1) 0, transparent 50%);
+  }
+}
