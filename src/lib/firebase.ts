@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDZteK3IZs6zIkofSr4KZI-IVyNAePLtq0",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "med-ai-9876543210.firebaseapp.com",
   projectId: "med-ai-9876543210",
   storageBucket: "med-ai-9876543210.firebasestorage.app",
